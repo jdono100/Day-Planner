@@ -17,16 +17,16 @@ setInterval(timerTime, 1000);
 // Write function to add text fields
 function writePlanner() {
     for (i = 0; i < 9; i++) {
-        var row = $("<div>").addClass("row");
-        var label = $("<span>").addClass("col-1 span7");
-        var input = $("<textarea class='span7 col-9' rows='2' required></textarea>").attr('index', i);
-        var saveBtn = $("<button class='btn btn-primary col-1'>Save</button>").attr('index', i);
+        var row = $("<div>").addClass("row time-block");
+        var label = $("<span>").addClass("col-1 span7 pl-0 pt-4");
+        var input = $("<textarea class='span7 col-10 hour' rows='2' required></textarea>").attr('index', i);
+        var saveBtn = $("<button class='btn btn-primary col-1 saveBtn'>Save</button>").attr('index', i);
         if (i <= 2) {
-            label.text((i + 9) + " AM")
+            label.text((i + 9) + " am")
         } else if (i == 3) {
-            label.text("12 PM")
+            label.text("12 pm")
         } else {
-            label.text((i - 3) + " PM")
+            label.text((i - 3) + " pm")
         }
         plannerElement.append(row);
         row.append(label);
