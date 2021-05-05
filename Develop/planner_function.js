@@ -9,19 +9,15 @@ var block15 = $("#15");
 var block16 = $("#16");
 var block17 = $("#17");
 
+// Make statements using moment to add today's date & time to top
+var time = moment();
+$("#today").text(`${time.format('dddd, MMMM Do YYYY')}`);
+$("#today-time").text(`${time.format('hh:mm A')}`);
+
 // Change time-block bg color depending on the time of day
 setColorTimer = () => {
-    // Make functions using moment to add today's date & time to top
-    var timer = () => {
-        var today = today = moment();
-        var todayTime = todayTime = moment();
-        $('#today').text(today.format('dddd, MMMM Do YYYY'));
-        $('#today-time').text(todayTime.format('hh:mm A'));
-    };
-    setInterval(timer, 1000);
-
     // Set a var to the current hour
-    var currentHour = moment().toObject().hours;
+    var currentHour = time.toObject().hours;
     // Look through the time-block ids to find if the hour is less than greater than or equal to the currentHour
     $(".time-block").each(function() {
         var thisHour = parseInt($(this).attr("id"));
