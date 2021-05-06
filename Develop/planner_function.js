@@ -1,3 +1,8 @@
+// Make statements using moment to add today's date & time to top
+var time = moment();
+$("#today").text(`${time.format('dddd, MMMM Do YYYY')}`);
+$("#today-time").text(`${time.format('hh:mm a')}`);
+
 // Set global vars for the time blocks
 var block9 = $("#9");
 var block10 = $("#10");
@@ -9,10 +14,25 @@ var block15 = $("#15");
 var block16 = $("#16");
 var block17 = $("#17");
 
-// Make statements using moment to add today's date & time to top
-var time = moment();
-$("#today").text(`${time.format('dddd, MMMM Do YYYY')}`);
-$("#today-time").text(`${time.format('hh:mm A')}`);
+
+// Save textarea values in localStorage
+$(".saveBtn").on("click", function() {
+    var timeBlock = $(this).parent().attr("id");
+    var plannerText = $(this).siblings(".description").val();
+    localStorage.setItem(timeBlock, plannerText);
+})
+saveScheduler = () => {
+    // Look and set the vars as local values
+    $(".time-block").each(function() {
+        var id = $(this).attr("id");
+        var text = localStorage.getItem(id);
+        
+        if (text !== null) {
+            $(this).children(".description").val(text);
+        }
+    })
+    
+}
 
 // Change time-block bg color depending on the time of day
 setColorTimer = () => {
@@ -30,27 +50,6 @@ setColorTimer = () => {
         };
     })
 }
-
-var saveBtn = $(".saveBtn")
-saveBtn.on("click", function() {
-    var timeBlock = parseInt($(this).attr("id"));
-    var plannerText = $(this).siblings(".description").val();
-    localStorage.setItem(timeBlock, plannerText);
-})
-// Save textarea values in localStorage
-saveScheduler = () => {
-    // Look and set the vars as local values
-    $(".time-block").each(function() {
-        var id = $(this).attr("id");
-        var text = localStorage.getItem(id);
-
-        if (text !== null) {
-            $(this).children(".description").val(text);
-        }
-    })
-
-}
-
 
 saveScheduler();
 setColorTimer();
