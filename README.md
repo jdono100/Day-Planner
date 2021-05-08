@@ -20,3 +20,6 @@ Finally, I decided to add some stylistic changes to make the website more appeal
 
 [Work Day Planner](https://jdono100.github.io/Week-05-Day-Planner/)
 
+## Screenshot
+
+<p align="center"><img src="./assets/day-planner-ss.png" /></p>
