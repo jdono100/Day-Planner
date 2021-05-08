@@ -12,5 +12,11 @@ I started by making the date/time in the jumbotron display correctly. I then tho
 
 Next I made formatting changes to the planner's Bootstrap classes and the style.css page, before starting to write the JavaScript for the time-blocks changing color and saving into local storage. Originally it didn't work the way that I wrote it, however, and was trying many things to try and figure out how to get it to work, including moving blocks around the JavaScript code and putting everything in a '$(document).ready()' function, but none of that worked.
 
-It turns out, you can't use arrow function notation inside jQuery '.on()' or '.each()' event handlers--though I'm sure that most jQuery operations won't work correctly with arrow notation. I've gotten used to writing functions in that style--to me it makes for clearer code that can be easier to read--but once I changed it to normal function syntax, it ended up working marvelously. It ended up being nice not using for loops in the JavaScript code, which I forsure thought I would have to use but jQuery makes that redundant in this exercise.
+It turns out, you can't use arrow function notation inside jQuery '.on()' or '.each()' event handlers--though I'm sure that most jQuery operations won't work correctly with arrow notation. I've gotten used to writing functions in that style--to me it makes for clearer code that can be easier to read--but once I changed it to normal function syntax, it ended up working great. It ended up being nice not using for loops in the JavaScript code, which I thought I would have to use but jQuery makes that redundant in this exercise.
+
+Finally, I decided to add some stylistic changes to make the website more appealing to the eye and to give my assignment a personal touch, and did this by playing around with bootstrap classes and editing the style.css until I had a website that worked well and looked the way I wanted it to.
+
+## Link
+
+[Work Day Planner](https://jdono100.github.io/Week-05-Day-Planner/)
 
