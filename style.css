@@ -22,7 +22,7 @@ textarea {
   background-color: transparent;
   color: black;
   padding: auto;
-  border-bottom: 1rem solid #05d64e;
+  border-bottom: 1rem solid hsl(141, 95%, 43%);
   border-radius: 0;
 }
 
@@ -58,17 +58,17 @@ textarea {
 }
 
 .past {
-  background-color: #d3d3d3;
+  background-color: hsla(0, 0%, 83%, 0.8);
   color: white;
 }
 
 .present {
-  background-color: #ff6961;
+  background-color: hsla(5, 95%, 43%, 0.8);
   color: white;
 }
 
 .future {
-  background-color: #77dd77;
+  background-color: hsla(151, 78%, 49%, 0.8);
   color: white;
 }
 
@@ -76,7 +76,7 @@ textarea {
   border-left: 0.1rem solid black;
   border-top-right-radius: 1.5rem;
   border-bottom-right-radius: 1.5rem;
-  background-color: hsl(141, 95%, 35%);
+  background-color: #04ae40;
   color: white;
 }
 
